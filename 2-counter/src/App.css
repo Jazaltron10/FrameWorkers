@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background:linear-gradient(to bottom left, orange, purple, pink );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.DisplayNum{
+  font-size: 15rem ;
+  width: 30rem;
+  background-color: rgba(0,0,0,0.3);
+}
+.btnCon{
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+button {
+  font-size: .9rem;
+  margin: 2rem;
+  border: 2.5px groove white;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+.plus{
+  color: white;
+  background:linear-gradient(to top left,yellow,green );
+}
+.minus{
+  color: white;
+  background:linear-gradient(to left top, blue, red);
+}
+button:hover{
+  box-shadow: 0 0.4rem 1rem  aqua;
+  cursor: pointer;
+}
