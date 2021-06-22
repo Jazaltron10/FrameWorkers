@@ -1,16 +1,10 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -22,28 +16,47 @@
   justify-content: center;
   color: white;
 }
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header{
+  height: 10rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 5px 5px 5px  black;
+  animation: round-bounce 2s ease-in-out infinite;
+}
+@keyframes round-bounce {
+  0% {
+      transform: scale(.8);
+      color: lime;
+    }
+    50% {
+      transform: scale(1.1);
+      color: yellow;
+    }
+    100% {
+      color: red;
+      transform: scale(.8);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.overlay{
+  transition: all .8s ease-in-out;
+  background:linear-gradient(to left,rgba(255, 9, 9, 0.1),rgba(20, 248, 20, 0.3),rgba(19, 19, 191, 0.1) );
+  box-shadow: 0px 0px  5px 1px black;
+  width: 30rem;
+}
+.overlay:hover{
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+  border-radius: 100px;
 }
 .DisplayNum{
   font-size: 15rem ;
-  width: 30rem;
-  background-color: rgba(0,0,0,0.3);
+  /* width: 30rem; */
 }
 .btnCon{
-  background-color: rgba(0,0,0,0.3);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  /* width: 30rem; */
 }
 button {
   font-size: .9rem;
@@ -62,7 +75,57 @@ button {
   color: white;
   background:linear-gradient(to left top, blue, red);
 }
+.reset{
+  font-size: 1.1rem ;
+  color: yellow;
+  border-color: yellow;
+  background-color: black;
+}
 button:hover{
-  box-shadow: 0 0.4rem 1rem  aqua;
+  box-shadow: 0px 0px  15px 5px pink;
   cursor: pointer;
+}
+
+/* Responsive Section of My code */
+@media screen and (max-width:540px) {
+  .overlay{
+    width: 22rem;
+  }
+  .btnCon{
+    width: 100%;
+    padding: 1rem;
+  }
+  button {
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2.5px groove white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    transition: all .3s ease;
+  }
+  .DisplayNum{
+    font-size: 13.5rem;
+  }
+}
+@media screen and (max-width:320px) {
+  .overlay{
+    width: 17rem;
+  }
+  .btnCon{
+    width: 100%;
+    padding: 1rem;
+  }
+  button {
+    font-size: .6rem;
+    margin: 1rem;
+    border: 2.5px groove white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    transition: all .3s ease;
+  }
+  .DisplayNum{
+    font-size: 10rem;
+  }
 }
