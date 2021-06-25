@@ -2,6 +2,19 @@
 
 # [Choice] Node.js version: 16, 14, 12
 ARG VARIANT="16-buster"
-FROM node:latest
-COPY . .
 
+FROM node:16-alpine
+
+WORKDIR /task-docker
+
+ENV PATH="./node_modules/.bin:$PATH"
+
+COPY ./package*.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+RUN node node_modules/esbuild/install.js
+
+CMD [ "npm", "run", "dev" ]
