@@ -8,20 +8,28 @@
 }
 
 .App-header {
-  background:linear-gradient(to bottom left, orange, purple, pink );
+  background:linear-gradient(to bottom left,purple,deeppink,salmon,orange, pink );
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  background-repeat: no-repeat;
+  background-size: 2000%;
+  animation: bg-animation 50s infinite alternate;
+
+}
+@keyframes bg-animation {
+  0%{background-position: left;}
+  100%{background-position: right;}
 }
 .header{
   height: 10rem;
   font-size: 1.5rem;
   font-weight: 500;
   text-shadow: 5px 5px 5px  black;
-  animation: round-bounce 2s ease-in-out infinite;
+  animation: round-bounce 2s ease-in-out infinite alternate;
 }
 @keyframes round-bounce {
   0% {
