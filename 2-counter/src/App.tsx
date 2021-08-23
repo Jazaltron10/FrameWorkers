@@ -70,7 +70,7 @@ useEffect(() => {
       </section>
       <div className="music">
         {/* <!-- controls --> */}
-        <audio  autoplay loop  src ="./Assets/the-way-home-6674.mp3"></audio>
+        {/* <audio  autoplay loop  src ="./Assets/the-way-home-6674.mp3"></audio> */}
     </div>
       {/* Running Inside A Container */}
     </div>
