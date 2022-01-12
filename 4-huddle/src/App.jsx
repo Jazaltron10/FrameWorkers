@@ -19,7 +19,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <>
-    < GlobalStyles />
+    <GlobalStyles />
     <Header/>
     <Container>
       {content.map((item, index)=>(
