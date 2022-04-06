@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
+import InputField from './components/InputField';
 import GlobalStyles from './components/styles/Global';
+import { ContainerStyles, HeadingStyles } from './components/styles/Main.styles';
 
 const theme = {
   colors:{
@@ -55,30 +58,8 @@ const theme = {
 
 
 const App: React.FC =()=> {
-  const ContainerStyles = styled.article`
-    margin: auto;
-    max-width: 768px;
-    min-height: 100vh;
-    background-color: palegreen;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `
-  const BoxStyles =  styled.div`
-    height: 200px;
-    width: 200px;
-    color: yellow;
-    background: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    h1{
-      text-align: center;
-    }
-  `
-
-
+  const[todo, setTodo] = useState<string>("");
 
 
 
@@ -86,11 +67,11 @@ const App: React.FC =()=> {
     <ThemeProvider theme = {theme}>
       <ContainerStyles>
         <GlobalStyles/>
-          <BoxStyles>
-            <h1>
+          <HeadingStyles>
               Taskify  
-            </h1>
-          </BoxStyles>
+          </HeadingStyles>
+          <InputField todo={todo} setTodo={setTodo}/>
+
         </ContainerStyles>
     </ThemeProvider>
   )

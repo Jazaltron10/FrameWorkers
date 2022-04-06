@@ -1,6 +1,6 @@
-# Basics
+# **Basics**
 
->## TypeScript Basics
+>## **TypeScript Basics**
 
         let name:string = "Piyush";
         let name: string;
@@ -10,7 +10,7 @@
         let role: [number , string] // tuple
         role = [26, "dash"];
 
->## When defining an object we use the type keyword
+>## **When defining an object we use the type keyword**
 
         type Person = {
         name: String;
@@ -22,11 +22,11 @@
         age: 22,
         }
 
->## Typing an array of objects
+>## **Typing an array of objects**
 
         let lotsOfPeople : Person[];
 
->## Working with functions
+>## **Working with functions**
 
         // Defining a function
         // let printName: Function; // or
@@ -43,9 +43,9 @@
 
         let personName: unknown;
 
->## Interface
+>## **Interface**
 
->### Working with types and interfaces
+>### **Working with types and interfaces**
 
         type Animal = {
             name: string;
@@ -57,21 +57,22 @@
             sound?: string;
         }
 
-> ## Extending properties between types
+> ## **Extending properties between types**
 
         type X = {
             a:string
             b:number
         }
+<br>
 
-> ## to use the properties of X in Y, we use = X &
+> ## **To use the properties of X in Y, we use = X &**
         
         type Y = X & {
             c:string
             d:number
         }
 
-> ## wrong
+> ## **wrong**
 
         - Type '{ c: string; d: number; }' is not assignable to type 'Y'.
         - Type '{ c: string; d: number; }' is missing the following properties from type 'X': a,b
@@ -80,9 +81,40 @@
         // c:"abdas",
         // d:42,
         // }
+<br>
 
-> ## Now for interfaces
+> ## **Now for interfaces**
         
         interface supercar extends Car{
                 engine: string;
         }
+<br>
+
+
+> ## **Working with Hooks** 
+
+> ### ***useState***
+
+        const[todo, setTodo] = useState<string>("");
+
+<br>
+
+> ### <b>Destructuring Props in Components and setting their respective types<b> 
+
+        interface Props{
+                todo:string;
+                setTodo: React.Dispatch<React.SetStateAction<string>>;
+        }
+        const InputField = ({todo, setTodo}: Props) => {
+        return ()
+
+        OR
+
+        interface Props{
+                todo:string;
+                setTodo: React.Dispatch<React.SetStateAction<string>>;
+        }
+        const InputField:React.FC<Props> = ({todo, setTodo}) => {
+        return ()
+
+<br>

@@ -14,4 +14,26 @@ export const BtnStyles = styled.button`
         color:${({theme})=> theme.colors.limecols};
         cursor: pointer;
     }
+    `
+export const InputSubmitBtn = styled.button`
+    position: absolute;
+    width:50px;
+    height:50px;
+    margin:12px;
+    border-radius: 50px;
+    right:0;
+    border:none;
+    font-size:15px;
+    background-color: #2f74c0;
+    color:white;
+    transition: all ease-in .2s;
+    box-shadow: 0 0 10px black ;
+
+    &:hover{
+        background-color: #388ae2;
+    }
+    &:active{
+        transform:scale(.8);
+        box-shadow: 0 0 5px black;
+    }
 `
