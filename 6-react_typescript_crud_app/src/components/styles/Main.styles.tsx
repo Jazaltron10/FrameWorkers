@@ -6,7 +6,8 @@ export const ContainerStyles = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #2f74c0;
+    /* background-color: #2f74c0; */
+    background-color: rgb(0,0,30);
     `
 export const HeadingStyles =  styled.span`
     color: white;

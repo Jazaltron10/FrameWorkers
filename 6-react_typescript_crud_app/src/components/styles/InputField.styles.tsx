@@ -16,7 +16,7 @@ export const InputBox= styled.input`
     box-shadow: inset 0 0 5px black;
     
     &:focus{
-        box-shadow: 0 0 10px  1000px rgba(0,0,0,0.5);
+        box-shadow: 0 0 10px 1000px rgba(0,0,0,0.5);
         outline: none;
         }
 `
