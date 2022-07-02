@@ -2,7 +2,7 @@
 
 >## **TypeScript Basics**
 
-        let name:string = "Piyush";
+        let name: string = "Piyush";
         let name: string;
         let age: number;
         let isStudent: boolean;
