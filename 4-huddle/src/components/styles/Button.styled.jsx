@@ -12,7 +12,7 @@ export const Button = styled.button `
     background-color: ${({bg}) => bg ||"#fff"};
     color: ${({color}) => color ||"#333"};
 
-
+    
     &:hover{
         opacity: .9;
         transform: scale(.98);
