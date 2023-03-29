@@ -1,12 +1,14 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import GenStyles from "./styles/GenStyles";
-
-
+import GenStyles from "./Components/styles/GenStyles";
+import { Container } from "./Components/styles/Container.Styles";
+import GlobalStyles from "./Components/styles/Global";
 function App() {
-  return <GenStyles>Start</GenStyles>;
+  return (
+    <Container>
+      <GlobalStyles/>
+      <GenStyles>H</GenStyles>
+    </Container>
+  );
 }
 
 export default App;
